@@ -8,8 +8,8 @@
 
 const axios = require("axios");
 const md5 =require("crypto-js").MD5
-const token = config.cg.token;
-const skey = config.cg.skey;
+const token = process.env.TOKEN;
+const skey = process.env.SKEY;
 const shareid = 1129745;
 let result = "【橙光游戏】: ";
 function check() {
