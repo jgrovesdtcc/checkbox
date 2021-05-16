@@ -1,0 +1,42 @@
+name: rpg66-login-daily-task
+    
+on:
+  push:
+    branches: [ 66rpg_login ]
+  schedule:
+    # 每天早上6:10定时执行
+    - cron: '0 22 * * *'
+  watch:
+    types: started
+
+  workflow_dispatch:
+  
+env:
+  TOKEN: ${{ secrets.TOKEN }}
+  SKEY: ${{ secrets.SKEY }}
+  SCKEY: ${{ secrets.SERVER_KEY }}
+       
+jobs:
+  Rpg66Login:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+		
+	- name: Run install
+	  run: npm install
+    
+	- name: Run Load
+	  run: npm index.js
+	  
+	- name: Run Script
+	  run: node index.js
