@@ -1,5 +1,5 @@
 const axios = require("axios");
-const sckey = process.env.SERVER_KEY;//server酱turbo版key
+const serverKey = process.env.SERVER_KEY;//server酱turbo版key
 const qmsgkey = "";
 const cpkey = "";
 const pushplustoken = ""
@@ -22,8 +22,8 @@ async function sendmsg(text) {
 function server(msg) {
     return new Promise(async (resolve) => {
         try {
-            if (sckey) {
-                let url = `https://sctapi.ftqq.com/${sckey}.send`
+            if (serverKey) {
+                let url = `https://sctapi.ftqq.com/${serverKey}.send`
                 let data = `title=${encodeURI("签到盒每日任务已完成")}&desp=${encodeURI(msg.replace(/\n/g,"\n\n"))}`
                 let res = await axios.post(url, data)
                 if (res.data.code == 0) {
