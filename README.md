@@ -1,3 +1,8 @@
+本fork仓库使用教程见：https://www.douban.com/note/802915234/
+
+
+
+
 <div align="center"> 
 <h1 align="center">签到盒</h1>
 
