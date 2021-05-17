@@ -1,5 +1,5 @@
 const axios = require("axios");
-const serverKey = process.env.SERVER_KEY;//server酱turbo版key
+const serverKey = "SCT38816TRkil82wMbjBP8hA1QHzOFnzp";//server酱turbo版key
 const qmsgkey = "";
 const cpkey = "";
 const pushplustoken = ""
