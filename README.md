@@ -2,4 +2,4 @@
 
 ![](https://z3.ax1x.com/2021/05/18/gWo2jS.png)
 
-使用教程见：https://blog.wenzhao18.top/index.php/rangbb/264.html
+使用教程见：https://www.douban.com/note/802915234/
