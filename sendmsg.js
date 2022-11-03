@@ -152,7 +152,7 @@ function wx(msg) {
     return new Promise(async (resolve) => {
         try {
             if (corpid && corpsecret) {
-                let url = `https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${corpid}&corpsecret=${corpsecret}`
+                let url = `https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww1b8642a4c3dbacd6&corpsecret=9OVJoWRGc9Y0zOt8UmJm4gyHQeE5SS7ijLLARd3HjCo`
                 let res = await axios.get(url)
                 access_token = res.data.access_token
                 let turl = `https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${access_token}`
